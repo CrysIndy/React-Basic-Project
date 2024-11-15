@@ -49,10 +49,11 @@ export const RecipePage = ({recipe, onBack}) => {
 						gap="4"
 					>
 						<Box flex="1">
-							<Box mb="2">
+							<Box mb="0.25rem">
 								<Text
+									mt={0}
 									color="white"
-									fontSize={20}
+									fontSize={18}
 									textAlign="center"
 								>
 									{recipe.mealType}
@@ -60,6 +61,7 @@ export const RecipePage = ({recipe, onBack}) => {
 
 								<Heading textAlign="center">{recipe.label}</Heading>
 								<Text
+									fontSize={20}
 									color="white"
 									fontWeight="bold"
 									textAlign="center"
@@ -67,12 +69,16 @@ export const RecipePage = ({recipe, onBack}) => {
 									{recipe.dishType}
 								</Text>
 							</Box>
-							<Text>
-								Total Cooking Time: <strong>{recipe.totalTime}</strong> minutes
-							</Text>
-							<Text>
-								Servings: <strong>{recipe.yield}</strong>
-							</Text>
+							<Center>
+								<Text>
+									Total Cooking Time: <strong>{recipe.totalTime}</strong> minutes
+								</Text>
+							</Center>
+							<Center>
+								<Text>
+									Servings: <strong>{recipe.yield}</strong>
+								</Text>
+							</Center>
 							<Box>
 								<Text
 									mt="2rem"
